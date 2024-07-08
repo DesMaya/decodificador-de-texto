@@ -140,6 +140,10 @@ body {
     padding: 1rem;
 }
 
+.conteudo__direita__alerta {
+    display: auto;
+}
+
 .conteudo__direita__alerta__titulo {
     margin-top: 1rem;
     margin-bottom: 1rem;

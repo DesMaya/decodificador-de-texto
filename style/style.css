@@ -83,6 +83,14 @@ body {
     color: var(--dark-blue-300);
 }
 
+.conteudo__esquerda__formulario__alerta {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    display: flex;
+    justify-items: center;
+    gap: 0.5rem;
+}
+
 .conteudo__direita {
     display: flex;
     flex-direction: column;

@@ -71,7 +71,6 @@ body {
     border: none;
     outline: none;
     background-color: transparent;
-    font-family: "Inter";
     font-weight: 400;
     color: var(--dark-blue-300);
     font-size: 1.5rem;
@@ -89,6 +88,41 @@ body {
     display: flex;
     justify-items: center;
     gap: 0.5rem;
+}
+
+.conteudo__esquerda__formulario__botoes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.conteudo__esquerda__formulario__botoes__criptografar {
+    width: 20.5rem;
+    height: 4.18rem;
+    border: 1px solid var(--dark-blue-300);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    color: #ffffff;
+    background-color: var(--dark-blue-300);
+}
+
+.conteudo__esquerda__formulario__botoes__criptografar:hover {
+    background-color: var(--dark-blue-200);
+}
+
+.conteudo__esquerda__formulario__botoes__descriptografar{
+    width: 20.5rem;
+    height: 4.18rem;
+    border: 1px solid var(--dark-blue-300);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    color: var(--dark-blue-300);
+    background-color: #D8DFE8;
+}
+
+.conteudo__esquerda__formulario__botoes__descriptografar:hover {
+    background-color: var(--gray-200);
 }
 
 .conteudo__direita {

@@ -155,8 +155,6 @@ body {
 
 .conteudo__direita__exibicao {
     display: flex;
-    height: 90%;
-    width: 90%;
     margin: 1rem;
 }
 

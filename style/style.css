@@ -118,11 +118,11 @@ body {
     border-radius: 1.5rem;
     padding: 1.5rem;
     color: var(--dark-blue-300);
-    background-color: #D8DFE8;
+    background-color: var(--light-blue-100);
 }
 
 .conteudo__esquerda__formulario__botoes__descriptografar:hover {
-    background-color: var(--gray-200);
+    background-color: var(--gray-100);
 }
 
 .conteudo__direita {

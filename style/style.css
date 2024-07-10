@@ -68,6 +68,7 @@ body {
 }
 
 .conteudo__esquerda__formulario__mensagem {
+    resize: none;
     border: none;
     outline: none;
     background-color: transparent;

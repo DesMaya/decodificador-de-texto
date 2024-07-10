@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/app.js"></script>
 </head>
 
 <header class="cabecalho">
@@ -19,7 +18,7 @@
         <section class="conteudo__esquerda">
             <form class="conteudo__esquerda__formulario">
                 <textarea class="conteudo__esquerda__formulario__mensagem" name="mensagem"
-                    placeholder="Digite seu texto" required onchange="habilitarBotao()"></textarea>
+                    placeholder="Digite seu texto" required oninput="habilitarBotao()" id="input-mensagem"></textarea>
                 <div class="conteudo__esquerda__formulario__alerta">
                     <img src="assets/warning.svg" alt="simbolo de alerta">
                     <span>Apenas letras minúsculas e sem acento.</span>
@@ -46,7 +45,7 @@
             </div>
         </section>
     </main>
-
+    <script src="script/app.js"></script>
 </body>
 
 <footer></footer>

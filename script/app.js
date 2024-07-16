@@ -7,13 +7,8 @@
     "o": "ober",
     "u": "ufat"
  */
-const cifra = {
-    "e": "enter",
-    "i": "imes",
-    "a": "ai",
-    "o": "ober",
-    "u": "ufat"
-};
+const letrasNormais = ["e", "i", "a", "o", "u"]
+const codificadas = ["enter", "imes", "ai", "ober", "ufat"]
 
 const limpaTextarea = () => {
     let textarea = document.getElementById("conteudo-texto");
@@ -39,9 +34,6 @@ function criptografar() {
     let mensagem = textarea.value;
 
     if (!verificaMensagem(mensagem)) return;
-    
-    const letrasNormais = Object.keys(cifra)
-    const codificadas = Object.values(cifra)
 
     letrasNormais.forEach( (letra, i) => {
         mensagem = mensagem.replaceAll(letra, codificadas[i])
@@ -54,10 +46,6 @@ function descriptografar() {
     let mensagem = textarea.value;
 
     if (!verificaMensagem(mensagem)) return;
-    
-
-    const letrasNormais = Object.keys(cifra)
-    const codificadas = Object.values(cifra)
 
     codificadas.forEach( (letra, i) => {
         mensagem = mensagem.replaceAll(letra, letrasNormais[i])

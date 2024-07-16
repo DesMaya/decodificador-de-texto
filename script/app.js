@@ -1,12 +1,3 @@
-/**
- * Cifra de referência
- * 
- * "e": "enter",
-    "i": "imes",
-    "a": "ai",
-    "o": "ober",
-    "u": "ufat"
- */
 const letrasNormais = ["e", "i", "a", "o", "u"]
 const codificadas = ["enter", "imes", "ai", "ober", "ufat"]
 
@@ -26,7 +17,19 @@ function verificaMensagem(mensagem){
         return false;
     }
     else return true;
+}
 
+function exibirMensagem (mensagem){
+    let campoMensagem = document.querySelector(".conteudo__direita__exibicao");
+    campoMensagem.classList.remove("oculta");
+
+    let exibicaoAlerta = document.querySelector(".conteudo__direita__alerta");
+    exibicaoAlerta.classList.add("oculta");
+
+    let exibicaoMensagem = document.querySelector(".conteudo__direita__exibicao__mensagem");
+    exibicaoMensagem.textContent = mensagem;
+
+    limpaTextarea();
 }
 
 function criptografar(e) {
@@ -36,19 +39,10 @@ function criptografar(e) {
     if (!verificaMensagem(mensagem)) return;
 
     letrasNormais.forEach( (letra, i) => {
-        mensagem = mensagem.replaceAll(letra, codificadas[i])
+        mensagem = mensagem.replaceAll(letra, codificadas[i]);
     })
 
-    let campoMensagem = document.querySelector(".conteudo__direita__exibicao");
-    campoMensagem.classList.remove("oculta");
-
-    let exibicaoAlerta = document.querySelector(".conteudo__direita__alerta");
-    exibicaoAlerta.classList.add("oculta");
-
-    let exibicaoMensagem = document.querySelector(".conteudo__direita__exibicao__mensagem")
-    exibicaoMensagem.textContent = mensagem
-
-    limpaTextarea()
+    exibirMensagem(mensagem);
 
     e.preventDefault();
 }
@@ -60,19 +54,10 @@ function descriptografar(e) {
     if (!verificaMensagem(mensagem)) return;
 
     codificadas.forEach( (letra, i) => {
-        mensagem = mensagem.replaceAll(letra, letrasNormais[i])
+        mensagem = mensagem.replaceAll(letra, letrasNormais[i]);
     })
     
-    let campoMensagem = document.querySelector(".conteudo__direita__exibicao");
-    campoMensagem.classList.remove("oculta");
-
-    let exibicaoAlerta = document.querySelector(".conteudo__direita__alerta");
-    exibicaoAlerta.classList.add("oculta");
-
-    let exibicaoMensagem = document.querySelector(".conteudo__direita__exibicao__mensagem")
-    exibicaoMensagem.textContent = mensagem
-
-    limpaTextarea()
+    exibirMensagem(mensagem);
 
     e.preventDefault();
 

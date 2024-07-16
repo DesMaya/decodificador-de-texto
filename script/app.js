@@ -20,7 +20,12 @@ function verificaMensagem(mensagem){
 }
 
 function copiar(e){
-
+    let exibicaoMensagem = document.querySelector(".conteudo__direita__exibicao__mensagem");
+    navigator.clipboard.writeText(exibicaoMensagem.textContent);
+    alert("Texto copiado");
+    location.reload();
+    
+    e.preventDefault();
 }
 
 function exibirMensagem (mensagem){

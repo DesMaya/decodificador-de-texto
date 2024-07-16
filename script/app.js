@@ -40,21 +40,31 @@ function criptografar() {
 
     if (!verificaMensagem(mensagem)) return;
     
-
     const letrasNormais = Object.keys(cifra)
     const codificadas = Object.values(cifra)
-    //console.log(codificadas)
 
     letrasNormais.forEach( (letra, i) => {
-        //console.log(letra, codificadas[i])
         mensagem = mensagem.replaceAll(letra, codificadas[i])
     })
-    //console.log(mensagem)
-    return mensagem;
+    alert(mensagem)
 }
 
 function descriptografar() {
+    let textarea = document.getElementById("conteudo-texto");
+    let mensagem = textarea.value;
+
+    if (!verificaMensagem(mensagem)) return;
+    
+
+    const letrasNormais = Object.keys(cifra)
+    const codificadas = Object.values(cifra)
+
+    codificadas.forEach( (letra, i) => {
+        mensagem = mensagem.replaceAll(letra, letrasNormais[i])
+    })
+    alert(mensagem);
 
 }
+
 
 

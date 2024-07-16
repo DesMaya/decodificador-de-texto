@@ -19,6 +19,10 @@ function verificaMensagem(mensagem){
     else return true;
 }
 
+function copiar(e){
+
+}
+
 function exibirMensagem (mensagem){
     let campoMensagem = document.querySelector(".conteudo__direita__exibicao");
     campoMensagem.classList.remove("oculta");

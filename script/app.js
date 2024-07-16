@@ -7,23 +7,29 @@
     "o": "ober",
     "u": "ufat"
  */
-function verificaCaracterEspecial(mensagem) {
-    
+
+    // const hasUpper = (str) => /[A-Z]/.test(str);
+const limpaTextarea = () => {
+    let textarea = document.getElementById("conteudo-texto");
+    textarea.value = "";
 }
 
-function verificaTexto(){
+function verificaMensagem(){
     let textarea = document.getElementById("conteudo-texto");
     let mensagem = textarea.value;
-    let mensagemCorrigida;
 
+    if (!/[a-z]/.test(mensagem)){
+        alert("Apenas letras minúsculas e sem acento.");
+        return limpaTextarea();
+    }
+    else return mensagem;
 
-    return mensagemCorrigida;
 }
 
-function criptografar(mensagem) {
+function criptografar() {
 
 }
 
-function descriptografar(mensagem) {
+function descriptografar() {
 
 }

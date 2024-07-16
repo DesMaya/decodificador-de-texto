@@ -122,10 +122,6 @@ body {
     background-color: var(--gray-100);
 }
 
-.conteudo__esquerda__formulario__botoes__descriptografar:hover {
-    background-color: var(--gray-300);
-}
-
 .conteudo__direita {
     display: flex;
     flex-direction: column;

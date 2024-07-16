@@ -29,7 +29,7 @@ function verificaMensagem(mensagem){
 
 }
 
-function criptografar() {
+function criptografar(e) {
     let textarea = document.getElementById("conteudo-texto");
     let mensagem = textarea.value;
 
@@ -38,10 +38,22 @@ function criptografar() {
     letrasNormais.forEach( (letra, i) => {
         mensagem = mensagem.replaceAll(letra, codificadas[i])
     })
-    alert(mensagem)
+
+    let campoMensagem = document.querySelector(".conteudo__direita__exibicao");
+    campoMensagem.classList.remove("oculta");
+
+    let exibicaoAlerta = document.querySelector(".conteudo__direita__alerta");
+    exibicaoAlerta.classList.add("oculta");
+
+    let exibicaoMensagem = document.querySelector(".conteudo__direita__exibicao__mensagem")
+    exibicaoMensagem.textContent = mensagem
+
+    limpaTextarea()
+
+    e.preventDefault();
 }
 
-function descriptografar() {
+function descriptografar(e) {
     let textarea = document.getElementById("conteudo-texto");
     let mensagem = textarea.value;
 
@@ -50,7 +62,19 @@ function descriptografar() {
     codificadas.forEach( (letra, i) => {
         mensagem = mensagem.replaceAll(letra, letrasNormais[i])
     })
-    alert(mensagem);
+    
+    let campoMensagem = document.querySelector(".conteudo__direita__exibicao");
+    campoMensagem.classList.remove("oculta");
+
+    let exibicaoAlerta = document.querySelector(".conteudo__direita__alerta");
+    exibicaoAlerta.classList.add("oculta");
+
+    let exibicaoMensagem = document.querySelector(".conteudo__direita__exibicao__mensagem")
+    exibicaoMensagem.textContent = mensagem
+
+    limpaTextarea()
+
+    e.preventDefault();
 
 }
 
